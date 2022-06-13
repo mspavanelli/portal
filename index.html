@@ -21,7 +21,13 @@
   <script>
     document.querySelector("#goTo").addEventListener("click", (event) => {
       event.preventDefault();
-      window.open("X:\\\\brspoa173mcompartilhamentosjbs$SMT-Bases_GI");
+
+      try {
+        // window.open("X:\\\\brspoa173mcompartilhamentosjbs$SMT-Bases_GI");
+        window.history.pushState({}, "", "https://apple.com");
+      } catch (e) {
+        console.warn(e);
+      }
     });
   </script>
 </html>
